@@ -1,0 +1,16 @@
+.logo {
+  height: 70px;
+  width: 285px;
+  background: #006fa4;
+  box-shadow: 2px 2px 2px 0px rgba(5, 5, 5, 0.06);
+}
+.logo:before {
+  content: "\f0d7";
+  position: absolute;
+  bottom: -14px;
+  font-family: FontAwesome;
+  color: #006fa4;
+  font-size: 30px;
+  left: 50%;
+  margin-left: -6px;
+}

@@ -1,0 +1,93 @@
+:host-context(.rtl) {
+  label::after {
+    right: -20px;
+  }
+  li > a {
+    text-align: right;
+  }
+  span,
+  label {
+    text-align: right;
+  }
+  li.collapse input ~ label::after {
+    transform: rotate(-180deg);
+  }
+  li.collapse input:checked ~ label::after {
+    transform: rotate(-270deg);
+  }
+}
+
+:host-context(.ltr) {
+  label::after {
+    left: -20px;
+  }
+  li > a {
+    text-align: left;
+  }
+  span,
+  label {
+    text-align: left;
+  }
+  li.collapse input:checked ~ label::after {
+    transform: rotate(90deg);
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  min-height: 20px;
+  padding: 10px;
+}
+> li {
+  border-bottom: 1px solid;
+  border-color: #f2f2f2;
+}
+li:last-child {
+  border: none;
+}
+li > a {
+  color: #72777a;
+  text-decoration: none;
+  display: block;
+}
+span,
+label {
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  color: #72777a;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+li.collapse ul {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.5s;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+label::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f061";
+  position: absolute;
+  transition: all 0.5s;
+  color: #000;
+}
+
+li.collapse input:checked ~ app-navigation-item > ul {
+  visibility: visible;
+  list-style: none;
+  opacity: 1;
+  max-height: 999px;
+}

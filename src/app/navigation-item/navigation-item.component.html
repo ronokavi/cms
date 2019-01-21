@@ -1,0 +1,17 @@
+<ul *ngIf="items.length" cdkDropList (cdkDropListDropped)="drop($event)">
+  <li *ngFor="let item of items" class="collapse" cdkDrag>
+    <input type="checkbox" [id]="item.name" [name]="item.name" />
+    <ng-container [ngTemplateOutlet]="item[key].length ? categories: noCategories" [ngTemplateOutletContext]="{item:item}">
+    </ng-container>
+    <app-navigation-item *ngIf="item[key].length" [key]="key" [items]="item[key]"></app-navigation-item>
+  </li>
+</ul>
+
+<ng-template #noCategories let-item="item">
+  <span>{{item.name}}</span>
+</ng-template>
+<ng-template #categories let-item="item">
+  <label [for]="item.name">
+    {{item.name}}
+  </label>
+</ng-template>

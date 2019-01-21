@@ -1,0 +1,27 @@
+<div class="controls-wrapper">
+  <div class="controls-wrapper-title">
+    <i class="fa fa-laptop" data-selected="true"></i>&nbsp;Controls</div>
+  <div dragula="CONTROLS" [dragulaModel]="controls" (dragulaModelChange)="controls = $event" id="left">
+    <div *ngFor="let prop of objectProps">
+      <div class="controls-wrapper-type" [ngSwitch]="prop.type">
+        <i class="fas fa-arrows-alt"></i>
+        <span *ngSwitchCase="'text'">
+          <input *ngSwitchCase="'text'" [id]="prop.key" [type]="prop.type" [placeholder]="prop.placeholder">
+        </span>
+        <span *ngSwitchCase="'radio'">
+          <label *ngFor="let option of prop.options">
+            <input type="radio" [name]="prop.key" [value]="option.value">
+            {{option.label}}
+          </label>
+        </span>
+        <span *ngSwitchCase="'select'">
+          <select>
+            <option *ngFor="let option of prop.options" [value]="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
