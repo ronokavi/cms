@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ResizableModule } from 'angular-resizable-element';
 import { SharedModule } from './shared.module';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './logo/logo.component';
@@ -32,6 +33,7 @@ import { ControlsComponent } from './controls/controls.component';
     AppRoutingModule,
     DragDropModule,
     BrowserAnimationsModule,
+    ResizableModule,
     SharedModule,
   ],
   providers: [],

@@ -1,6 +1,7 @@
 <div class="controls-wrapper">
   <div class="controls-wrapper-title">
-    <i class="fa fa-laptop" data-selected="true"></i>&nbsp;Controls</div>
+    <i class="fa fa-laptop" data-selected="true"></i>&nbsp;Controls
+  </div>
   <div dragula="CONTROLS" [dragulaModel]="controls" (dragulaModelChange)="controls = $event" id="left">
     <div *ngFor="let prop of objectProps">
       <div class="controls-wrapper-type" [ngSwitch]="prop.type">

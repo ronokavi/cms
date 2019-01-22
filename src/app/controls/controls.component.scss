@@ -28,6 +28,10 @@
   }
 }
 
+.mwlResizable {
+  box-sizing: border-box; // required for the enableGhostResize option to work
+}
+
 .controls-wrapper {
   background: #fff;
   margin-top: 20px;
@@ -61,6 +65,9 @@
       border-radius: 10px;
       padding-left: 5px;
       color: #72777a;
+    }
+    i {
+      cursor: pointer;
     }
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DragulaService } from 'ng2-dragula';
+
 @Component({
   selector: 'app-controls',
   templateUrl: './controls.component.html',
@@ -56,6 +57,7 @@ export class ControlsComponent implements OnInit, OnDestroy {
         });
     console.log(JSON.stringify(this.objectProps));
   }
+
 
   ngOnDestroy() {
 

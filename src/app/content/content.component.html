@@ -1,5 +1,10 @@
 <div class="controls-wrapper">
   <ul id="right" dragula="CONTROLS" [dragulaModel]="controls" (dragulaModelChange)="controls = $event" style="border: 1px solid red;width:100%;min-height: 600px;">
-
+    <li>
+      <div class="rectangle" [ngStyle]="style" mwlResizable [validateResize]="validate" [resizeEdges]="{bottom: true, right: true, top: true, left: true}"
+        [enableGhostResize]="true" [resizeSnapGrid]="{left: 50, right: 50}" (resizeEnd)="onResizeEnd($event)">
+        <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{bottom: true, right: true}">
+      </div>
+    </li>
   </ul>
 </div>
