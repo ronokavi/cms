@@ -9,7 +9,7 @@ import { DragulaService } from 'ng2-dragula';
 })
 export class ControlsComponent implements OnInit, OnDestroy {
   @Input() dataObject;
-  private person = {
+  /*private controlsSchema = {
     name: {
       label: 'Name',
       value: 'Juri',
@@ -42,20 +42,40 @@ export class ControlsComponent implements OnInit, OnDestroy {
         required: true
       }
     }
-  };
-  private objectProps;
+  };*/
+  private config = [
+    {
+      type: 'input',
+      label: 'Full name',
+      name: 'name',
+      placeholder: 'Enter your name',
+    },
+    {
+      type: 'select',
+      label: 'Favourite food',
+      name: 'food',
+      options: ['Pizza', 'Hot Dogs', 'Knakworstje', 'Coffee'],
+      placeholder: 'Select an option',
+    },
+    {
+      label: 'Submit',
+      name: 'submit',
+      type: 'button',
+    },
+  ];
+  // private objectProps;
   constructor() {
 
   }
 
   ngOnInit() {
-    this.dataObject = this.person;
+    /*this.dataObject = this.formConfig;
     this.objectProps =
       Object.keys(this.dataObject || {})
         .map(prop => {
           return Object.assign({}, { key: prop }, this.dataObject[prop]);
         });
-    console.log(JSON.stringify(this.objectProps));
+    console.log(JSON.stringify(this.objectProps));*/
   }
 
 

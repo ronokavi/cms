@@ -9,12 +9,11 @@ export class ControlsService {
   constructor(public dragulaService: DragulaService) {
     this.dragulaService.createGroup('CONTROLS', {
       copy: (el, source) => {
-        return source.id === 'left';
+        return true;
       },
       accepts: (el, target, source, sibling) => {
         // To avoid dragging from right to left container
-        console.log(target.id);
-        return true;
+        return target.id === 'right';
       }
     });
   }

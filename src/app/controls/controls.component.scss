@@ -35,7 +35,7 @@
 .controls-wrapper {
   background: #fff;
   margin-top: 20px;
-  padding: 15px;
+  padding-top: 15px;
   &-title {
     text-align: center;
   }
@@ -44,30 +44,5 @@
     margin-right: 5px;
     background-color: rgba(0, 0, 0, 0.4);
     cursor: move;
-  }
-  &-type {
-    padding: 10px 0;
-    input[type="text"] {
-      width: 80%;
-      height: 25px;
-      border: none;
-      outline: none;
-      border: solid 1px #ccc;
-      border-radius: 10px;
-      color: #72777a;
-    }
-    select {
-      width: 83.2%;
-      outline: none;
-      height: 29px;
-      border: none;
-      border: solid 1px #ccc;
-      border-radius: 10px;
-      padding-left: 5px;
-      color: #72777a;
-    }
-    i {
-      cursor: pointer;
-    }
   }
 }

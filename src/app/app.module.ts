@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResizableModule } from 'angular-resizable-element';
+import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
+
 import { SharedModule } from './shared.module';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './logo/logo.component';
@@ -15,6 +17,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NavigationItemComponent } from './navigation-item/navigation-item.component';
 import { ControlsComponent } from './controls/controls.component';
+import { IconComponent } from './icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { ControlsComponent } from './controls/controls.component';
     ProfileComponent,
     NavigationComponent,
     NavigationItemComponent,
-    ControlsComponent
+    ControlsComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,7 @@ import { ControlsComponent } from './controls/controls.component';
     DragDropModule,
     BrowserAnimationsModule,
     ResizableModule,
+    DynamicFormModule,
     SharedModule,
   ],
   providers: [],

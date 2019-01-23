@@ -1,0 +1,15 @@
+.controls-wrapper-type {
+  padding: 10px 0;
+  &-holder {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    i {
+      cursor: pointer;
+      vertical-align: top;
+      margin: 5px;
+    }
+  }
+  &-holder:last-child {
+    border: none;
+  }
+}

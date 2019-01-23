@@ -1,0 +1,9 @@
+<div>
+  <div class="controls-wrapper-type" dragula="CONTROLS" [dragulaModel]="controls" (dragulaModelChange)="controls = $event"
+    id="left">
+    <div class="controls-wrapper-type-holder" *ngFor="let icon of _icons">
+      <i class="fas fa-arrows-alt"></i>
+      <img [src]="icon.src" [ngStyle]="{'width.px': icon.width || 30,'height.px': icon.height || 30}" [title]="icon.description" />
+    </div>
+  </div>
+</div>

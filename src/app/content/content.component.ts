@@ -18,7 +18,7 @@ export class ContentComponent {
   public style: object = {};
 
   validate(event: ResizeEvent): boolean {
-    const MIN_DIMENSIONS_PX: number = 50;
+    const MIN_DIMENSIONS_PX = 50;
     if (
       event.rectangle.width &&
       event.rectangle.height &&
@@ -43,8 +43,6 @@ export class ContentComponent {
   ngOnInit() {
 
   }
-
-
 
   ngOnDestroy() {
     // destroy all the subscriptions at once

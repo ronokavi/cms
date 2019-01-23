@@ -8,10 +8,10 @@
 </ul>
 
 <ng-template #noCategories let-item="item">
-  <span>{{item.name}}</span>
+  <span [title]="item.name">{{item.name}}</span>
 </ng-template>
 <ng-template #categories let-item="item">
-  <label [for]="item.name">
+  <label [for]="item.name" [title]="item.name">
     {{item.name}}
   </label>
 </ng-template>
